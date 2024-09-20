@@ -1,0 +1,31 @@
+
+.landing-page-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.landing-page-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.my-masonry-grid {
+  display: flex;
+  width: auto;
+}
+
+.my-masonry-grid_column {
+
+  background-clip: padding-box;
+}
+
+.masonry-item {
+  border-radius: 8px;
+}
