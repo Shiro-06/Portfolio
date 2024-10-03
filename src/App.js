@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
-import Preloader from "../src/components/Pre";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Preloader from "./components/Preloader/Preloader";
+import Navbar from "./components/NavBar/Navbar";
+import Footer from "./components/Footer/Footer";
 import LandingPage from "./components/LandingPage/LandingPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
-import "./style.css";
-import "./App.css";
+import "./style.scss";
+import "./main.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import './i18n';
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -25,7 +26,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />

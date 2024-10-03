@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import {  CgFileDocument } from "react-icons/cg";
-import {
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
-  AiOutlineUser,
-} from "react-icons/ai";
+import { AiOutlineHome, AiOutlineUser, AiOutlineFundProjectionScreen,AiOutlineMail } from 'react-icons/ai';
+import "./NavBar.scss";
+import "../../main.scss";
 
 function NavBar() {
   const [expand, setExpand] = useState(false);
@@ -53,13 +51,18 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#project" onClick={() => setExpand(false)}>
+              <Nav.Link href="#projects" onClick={() => setExpand(false)}>
                 <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} /> Projects
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#resume" onClick={() => setExpand(false)}>
+              <Nav.Link href="#cv" onClick={() => setExpand(false)}>
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+              </Nav.Link>
+            </Nav.Item>
+             <Nav.Item>
+              <Nav.Link href="#contact" onClick={() => setExpand(false)}>
+                <AiOutlineMail style={{ marginBottom: "2px" }} /> Contact
               </Nav.Link>
             </Nav.Item>
           </Nav>

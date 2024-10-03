@@ -6,8 +6,9 @@ import { Element } from "react-scroll";
 import Home from "../Home/Home";
 import About from "../About/About";
 import Projects from "../Projects/Projects";
+import ContactForm from "../ContactForm/ContactForm";
 import Resume from "../Resume/ResumeNew";
-import "./LandingPage.css";
+import "./LandingPage.scss";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -42,6 +43,9 @@ const LandingPage = () => {
         </Element>
         <Element name="resume" className="masonry-item" data-aos="fade-up">
           <Resume />
+        </Element>
+        <Element name="contact" className="masonry-item" data-aos="fade-up">
+          <ContactForm />
         </Element>
       </Masonry>
     </div>
