@@ -25,17 +25,17 @@ function ContactForm() {
     if (formData.name && formData.email && formData.message) {
       // Envoyer le formulaire via EmailJS
       emailjs.send(
-        'service_xzaposi', // Remplacez par votre service ID
-        'template_hgyya2q', // Remplacez par votre template ID
+        'service_xzaposi', 
+        'template_hgyyaq', 
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message
         },
-        'y6L1UGXgbYxN9E6rn' // Remplacez par votre user ID
+        'y6L1UGXgbYxN9E6rn' 
       ).then((response) => {
         console.log('SUCCESS!', response.status, response.text);
-        alert('Message envoyé avec succés !');
+        alert('Message envoyé avec succès !');
       }).catch((err) => {
         console.error('FAILED...', err);
         alert('Failed to send message. Please try again later.');
@@ -46,51 +46,53 @@ function ContactForm() {
   };
 
   return (
-    <Container className="contact-form-section" id="contact">
-      <h2>Contact</h2>
-      <Form onSubmit={handleSubmit}>
-        <Form.Group controlId="formName">
-          <Form.Label>Name</Form.Label>
-          <Form.Control
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Enter your name"
-            required
-          />
-        </Form.Group>
+    <>
+      <h2 className="contact-title">Contactez-moi</h2>
+      <Container fluid className="contact-form-section" id="contact">
+        <Form onSubmit={handleSubmit} className="contact-form">
+          <Form.Group controlId="formName">
+            <Form.Label>Nom :</Form.Label>
+            <Form.Control
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Entrez votre nom"
+              required
+            />
+          </Form.Group>
 
-        <Form.Group controlId="formEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Enter your email"
-            required
-          />
-        </Form.Group>
+          <Form.Group controlId="formEmail">
+            <Form.Label>Adresse e-mail :</Form.Label>
+            <Form.Control
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Entrez votre adresse e-mail"
+              required
+            />
+          </Form.Group>
 
-        <Form.Group controlId="formMessage">
-          <Form.Label>Message</Form.Label>
-          <Form.Control
-            as="textarea"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            rows={3}
-            placeholder="Enter your message"
-            required
-          />
-        </Form.Group>
+          <Form.Group controlId="formMessage">
+            <Form.Label>Message :</Form.Label>
+            <Form.Control
+              as="textarea"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              rows={3}
+              placeholder="Entrez votre message"
+              required
+            />
+          </Form.Group>
 
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </Form>
-    </Container>
+          <Button variant="primary" type="submit">
+            Envoyer
+          </Button>
+        </Form>
+      </Container>
+    </>
   );
 }
 

@@ -14,8 +14,9 @@ const resources = {
   fr: {
     translation: {
       "welcome": "Bienvenue dans mon portfolio",
-      "submit": "Soumettre",
+      "submit": "Envoyer",
       "message": "Message",
+      "Home": "Accueil",
       // Ajoutez d'autres traductions ici
     }
   }
@@ -25,7 +26,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: "en", // Langue par défaut
+    lng: "fr", // Langue par défaut modifiée en français
+    fallbackLng: "fr", // Langue de secours
     interpolation: {
       escapeValue: false
     }

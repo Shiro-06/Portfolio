@@ -5,9 +5,9 @@ import Particle from "../Particle";
 import leaf from "../../Assets/Projects/leaf.png";
 import emotion from "../../Assets/Projects/emotion.png";
 import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
+import Booki from "../../Assets/Projects/Booki.png";
 import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import OhMyFood from "../../Assets/Projects/Ohmyfood.png";
 import "./Projects";
 
 function Projects() {
@@ -16,18 +16,17 @@ function Projects() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          Mes <strong className="purple"> Projets</strong> 
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          Voici quelques projets sur lesquels j'ai travaillé récemment.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
-              isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
+              imgPath={Booki}
+              title="Booki"
+              description="J'ai intégré l'interface du site web pour une start-up qui aide les utilisateurs à trouver des hébergements et des activités. J'ai travaillé avec la CTO et le designer UI. On m'a fourni une maquette du site, une note de synthèse des spécifications, et une structure de fichiers de base avec du code HTML et CSS. J'ai complété ce code et conservé la structure de dossiers. Ce projet passionnant est désormais terminé !"
               ghLink="https://github.com/soumyajit4419/Chatify"
               demoLink="https://chatify-49.web.app/"
             />
@@ -35,12 +34,11 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
-              isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              imgPath={OhMyFood}
+              title="Ohmyfood"
+              description="J'ai intégré une start-up de la restauration souhaitant s'imposer à Paris. Ma mission était de développer un site mobile first pour répertorier les menus de restaurants gastronomiques. L'équipe commerciale avait déjà convaincu quatre restaurateurs d'utiliser la plateforme. J'ai travaillé sur le projet en suivant les maquettes fournies et en m'assurant que le site soit responsive et utilise SASS pour le CSS. J'ai également soigné les animations CSS et expliqué leur fonctionnement. Le site est désormais terminé !"
+              ghLink="https://github.com/Shiro-06/P4"
+              demoLink="https://shiro-06.github.io/P4/"
             />
           </Col>
 
@@ -48,8 +46,8 @@ function Projects() {
             <ProjectCard
               imgPath={editor}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
+              title="Sophie Bluel"
+              description="Éditeur de code et de markdown en ligne construit avec react.js. Éditeur en ligne qui supporte le code html, css et js avec une vue instantanée du site web. Éditeur de markdown en ligne pour créer des fichiers README qui supporte GFM, les balises Html personnalisées avec une barre d'outils et un aperçu instantané. Les deux éditeurs supportent la sauvegarde automatique du travail en utilisant le stockage local."
               ghLink="https://github.com/soumyajit4419/Editor.io"
               demoLink="https://editor.soumya-jit.tech/"              
             />
@@ -60,7 +58,7 @@ function Projects() {
               imgPath={leaf}
               isBlog={false}
               title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
+              description="Utilisation du dataset de maladies des plantes de Kaggle et entraînement d'un modèle de classification d'images en utilisant le framework 'PyTorch' avec CNN et l'apprentissage par transfert avec 38 classes de diverses feuilles de plantes. Le modèle a réussi à détecter les feuilles malades et saines de 14 plantes uniques. J'ai pu atteindre une précision de 98% en utilisant le modèle pré-entraîné Resnet34."
               ghLink="https://github.com/soumyajit4419/Plant_AI"
               demoLink="https://plant49-ai.herokuapp.com/"
             />
@@ -71,9 +69,9 @@ function Projects() {
               imgPath={suicide}
               isBlog={false}
               title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
+              description="Utilisation du 'Traitement Automatique du Langage Naturel' pour la détection des posts liés au suicide et de l'idéation suicidaire des utilisateurs dans le cyberespace, contribuant ainsi à la prévention du suicide."
               ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Veuillez inclure un lien de démonstration ici
             />
           </Col>
 
@@ -81,11 +79,10 @@ function Projects() {
             <ProjectCard
               imgPath={emotion}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
+              title="Reconnaissance Faciale et Détection des Émotions"
+              description="Entraînement d'un classificateur CNN en utilisant le 'dataset FER-2013' avec Keras et le backend tensorflow. Le classificateur a réussi à prédire les différents types d'émotions humaines. La précision la plus élevée obtenue avec le modèle était de 60,1%. Ensuite, utilisation d'Open-CV pour détecter le visage dans une image et passer le visage au classificateur pour prédire l'émotion d'une personne."
               ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              // demoLink="https://blogs.soumya-jit.tech/"      <--------Veuillez inclure un lien de démonstration ici 
             />
           </Col>
         </Row>

@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Masonry from "react-masonry-css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Element } from "react-scroll";
 import Home from "../Home/Home";
 import About from "../About/About";
 import Projects from "../Projects/Projects";
@@ -13,7 +12,7 @@ import "./LandingPage.scss";
 const LandingPage = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 750,
       once: false, // Permet aux animations de se déclencher à chaque défilement
     });
   }, []);
@@ -26,27 +25,26 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page">
-
       <Masonry
         breakpointCols={breakpointColumnsObj}
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >
-        <Element name="home" className="masonry-item" data-aos="fade-up">
+        <div id="home" className="masonry-item" data-aos="fade-up">
           <Home />
-        </Element>
-        <Element name="about" className="masonry-item" data-aos="fade-up">
+        </div>
+        <div id="about" className="masonry-item" data-aos="fade-up">
           <About />
-        </Element>
-        <Element name="projects" className="masonry-item" data-aos="fade-up">
+        </div>
+        <div id="projects" className="masonry-item" data-aos="fade-up">
           <Projects />
-        </Element>
-        <Element name="resume" className="masonry-item" data-aos="fade-up">
+        </div>
+        <div id="resume" className="masonry-item" data-aos="fade-up">
           <Resume />
-        </Element>
-        <Element name="contact" className="masonry-item" data-aos="fade-up">
+        </div>
+        <div id="contact" className="masonry-item" data-aos="fade-up">
           <ContactForm />
-        </Element>
+        </div>
       </Masonry>
     </div>
   );

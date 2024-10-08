@@ -8,33 +8,38 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Soumyajit Behera </span>
-            from <span className="purple"> Bhubaneswar, India.</span>
+            Bonjour à tous, je m'appelle <span className="purple">Suppa Bastien </span>
+            j'ai 30 ans et je viens de <span className="purple"> Nice, en France.</span>
             <br />
-            I am currently employed as a software developer at Juspay.
+            Je suis actuellement à la recherche d'un emploi (ou mission) en tant que <span className="purple">développeur Front-End.</span>
             <br />
-            I have completed Integrated MSc (IMSc) in Maths and Computing at BIT
-            Mesra.
+            À la suite d'une reconversion professionnelle j'ai validé le parcours<span className="purple"> BTS intégrateur Web</span> avec <span className="purple">OpenClassrooms</span> en 2024.
             <br />
             <br />
-            Apart from coding, some other activities that I love to do!
+            En dehors du codage, voici quelques autres activités qui me passionnent :
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Playing Games
+              <ImPointRight /> L'informatique
             </li>
             <li className="about-activity">
-              <ImPointRight /> Writing Tech Blogs
+              <ImPointRight /> La Musique
             </li>
             <li className="about-activity">
-              <ImPointRight /> Travelling
+              <ImPointRight /> Les Voyages
+            </li>
+            <li className="about-activity">
+              <ImPointRight /> Le Paysagisme
+            </li>
+            <li className="about-activity">
+              <ImPointRight /> Les Jeux-vidéos
             </li>
           </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
+          “Votre temps est limité, ne le gâchez pas en menant une existence qui n’est pas la vôtre. ”{" "}
           </p>
-          <footer className="blockquote-footer">Soumyajit</footer>
+          <footer className="blockquote-footer">De Steve Jobs / Discours à Stanford en 2005</footer>
         </blockquote>
       </Card.Body>
     </Card>
