@@ -2,15 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { CgFileDocument } from "react-icons/cg";
 import { AiOutlineHome, AiOutlineUser, AiOutlineFundProjectionScreen, AiOutlineMail } from 'react-icons/ai';
-import { FaGlobe } from 'react-icons/fa'; 
-import { useTranslation } from 'react-i18next'; 
 import "./NavBar.scss";
 import "../../main.scss";
 
 function NavBar() {
   const [expand, setExpand] = useState(false);
   const [navColour, setNavColour] = useState(false);
-  const { i18n } = useTranslation(); 
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,11 +22,6 @@ function NavBar() {
   }, []);
 
   const toggleExpand = () => setExpand(!expand);
-
-  const changeLanguage = () => {
-    const newLang = i18n.language === 'fr' ? 'en' : 'fr';
-    i18n.changeLanguage(newLang);
-  };
 
   const handleNavClick = (id) => {
     const element = document.getElementById(id);
@@ -78,11 +71,7 @@ function NavBar() {
                 <AiOutlineMail style={{ marginBottom: "2px" }} /> Contact
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link onClick={changeLanguage}>
-                <FaGlobe style={{ marginBottom: "2px" }} /> {i18n.language === 'fr' ? 'EN' : 'FR'}
-              </Nav.Link>
-            </Nav.Item>
+
           </Nav>
         </Navbar.Collapse>
       </Container>

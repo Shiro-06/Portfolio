@@ -26,7 +26,7 @@ function ContactForm() {
       // Envoyer le formulaire via EmailJS
       emailjs.send(
         'service_xzaposi', 
-        'template_hgyyaq', 
+        'template_hgyya2q', 
         {
           from_name: formData.name,
           from_email: formData.email,
