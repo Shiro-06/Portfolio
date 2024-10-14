@@ -1,4 +1,5 @@
 @import "../../main.scss";
+
 .project-section {
   position: relative !important;
   padding-top: 150px !important;
@@ -21,75 +22,45 @@
   opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
+  cursor: pointer; 
 }
 
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
   box-shadow: 
-  0 0 5px #478ffc, 
-  0 0 7px #54aef8, 
-  0 0 9px #83a7f7, 
-  0 0 12px #6991ff, 
-  0 0 15px #ff69b4, 
-  0 0 17px #ff69b4, 
-  0 0 19px #ff69b4 !important;
-}
-
-.blog-card {
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
-  padding-left: 25px !important;
-  padding-right: 25px !important;
-  height: auto !important;
-}
-
-.blog-card-view {
-  background-color: transparent !important;
-  box-shadow: 0 3px 3px 2px rgba(145, 77, 161, 0.459) !important;
-  color: white !important;
-  transition: all 0.5s ease 0s !important;
-  height: 100% !important;
-}
-
-.blog-link {
-  color: white !important;
-  text-decoration: none !important;
-}
-
-.blog-link:hover {
-  cursor: pointer !important;
-}
-
-.blog-card-view:hover {
-  transform: scale(1.02) !important;
-  overflow: hidden !important;
-  box-shadow: 
-  0 0 5px #478ffc, 
-  0 0 7px #54aef8, 
-  0 0 9px #83a7f7, 
-  0 0 12px #6991ff, 
-  0 0 15px #ff69b4, 
-  0 0 17px #ff69b4, 
-  0 0 19px #ff69b4 !important;
+    0 0 5px #fc47b7, 
+    0 0 7px #f700ff, 
+    0 0 9px #d94cff, 
+    0 0 12px #b353ff, 
+    0 0 15px #8c59ff, 
+    0 0 17px #6660ff, 
+    0 0 19px #3f66ff, 
+    0 0 21px #196dff, 
+    0 0 23px #006dff !important;
 }
 
 .card-img-top {
   padding: 20px !important;
   opacity: 0.8 !important;
   border-radius: 10px !important;
-}
+  width: 100%; 
+  height: 30vh; 
+  object-fit: cover; 
 
-.blog-img {
-  padding: 0px !important;
-  opacity: 0.8 !important;
-  border-radius: 0px !important;
+  @media (max-width: 768px) {
+    height: 25vh; 
+  }
+
+  @media (max-width: 576px) {
+    height: 20vh; 
+  }
 }
 
 .btn-primary {
   color: #fff !important;
   background-color: $primary-color !important;
-  border-color: #3e3686 !important;
+  border-color: #000000 !important;
 }
 
 .btn-primary:hover {
@@ -108,4 +79,176 @@
   font-size: 2.3em !important;
   font-weight: 500 !important;
   padding-top: 10px !important;
+}
+
+.card-title {
+  color: $primary-color;
+  font-size: 1.5em !important;
+  font-weight: bolder !important;
+  margin-bottom: 15px !important;
+}
+
+// CAROUSEL & MODAL //
+
+.custom-modal .modal-dialog {
+  max-width: 80%;
+}
+
+.custom-modal .modal-content {
+  background-color: #222224;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 20px;
+}
+
+.custom-modal .modal-header {
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+.custom-modal .modal-title {
+  color: $primary-color;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.custom-modal .modal-body {
+  padding: 20px;
+}
+
+.custom-modal .modal-body p {
+  padding: 20px;
+  font-size: larger;
+}
+
+.custom-modal .modal-footer {
+  border-top: 1px solid #444;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+}
+
+.custom-modal .btn-secondary {
+  background-color: $primary-color;
+  border: none;
+}
+
+.custom-modal .carousel-item img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .custom-modal .modal-dialog {
+    max-width: 95%;
+  }
+
+  .custom-modal .modal-body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .custom-modal .carousel-item img {
+    max-height: 300px;
+  }
+}
+
+.tech-stack {
+  margin-top: 10px;
+}
+
+.tech-button {
+  margin: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: rgb(0, 0, 0) !important;
+  transition: background-color 0.3s ease;
+  border-color: transparent !important;
+}
+
+.tech-button.html5 {
+  background-color: #e34f26;
+}
+
+.tech-button.html5:hover {
+  background-color: darken(#e34f26, 30%) !important;
+}
+
+.tech-button.css3 {
+  background-color: #1572b6;
+}
+
+.tech-button.css3:hover {
+  background-color: darken(#1572b6, 30%) !important;
+}
+
+.tech-button.javascript {
+  background-color: #f7df1e;
+}
+
+.tech-button.javascript:hover {
+  background-color: darken(#f7df1e, 30%) !important;
+}
+
+.tech-button.react {
+  background-color: #61dafb;
+}
+
+.tech-button.react:hover {
+  background-color: darken(#61dafb, 30%) !important;
+}
+
+.tech-button.nodejs {
+  background-color: #68a063;
+}
+
+.tech-button.nodejs:hover {
+  background-color: darken(#68a063, 30%) !important;
+}
+
+.tech-button.sass {
+  background-color: #cc6699;
+}
+
+.tech-button.sass:hover {
+  background-color: darken(#cc6699, 30%) !important;
+}
+
+.tech-button.redux {
+  background-color: #764abc;
+}
+
+.tech-button.redux:hover {
+  background-color: darken(#764abc, 30%) !important;
+}
+
+.tech-button.swagger {
+  background-color: #85ea2d;
+}
+
+.tech-button.swagger:hover {
+  background-color: darken(#85ea2d, 30%) !important;
+}
+
+.tech-button.seo {
+  background-color: #4caf50;
+}
+
+.tech-button.seo:hover {
+  background-color: darken(#4caf50, 30%) !important;
+}
+
+.tech-button.backend {
+  background-color: #333;
+}
+
+.tech-button.backend:hover {
+  background-color: darken(#333, 30%) !important;
 }

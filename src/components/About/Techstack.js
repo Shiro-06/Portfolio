@@ -13,7 +13,8 @@ import {
   SiSass,
   SiCss3,
   SiHtml5,
-  SiRedux
+  SiRedux,
+  SiBootstrap,
 } from "react-icons/si";
 
 function Techstack() {
@@ -48,6 +49,9 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
       <SiRedux title="Redux"/>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiBootstrap title="Bootstrap" /> 
       </Col>
     </Row>
   );

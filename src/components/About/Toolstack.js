@@ -5,7 +5,8 @@ import {
   SiPostman,
   SiSlack,
   SiSwagger,
-  SiWindows11
+  SiWindows11,
+  SiGithub
 
 } from "react-icons/si";
 
@@ -26,6 +27,9 @@ function Toolstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
       <SiSwagger title="Swagger"/>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiGithub title="GitHub" /> 
       </Col>
     </Row>
   );

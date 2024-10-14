@@ -17,7 +17,7 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              Laissez-moi <span className="purple"> me présenter </span>
+             <span className="purple"> Présentation </span>
             </h1>
             <p className="home-about-body">
 
@@ -28,17 +28,19 @@ function Home2() {
                 et la découverte de nouvelles technologies.
               <br />
               <br />
-              Mes domaines d'intérêt sont la création de nouvelles &nbsp;
+              Mes domaines d'intérêt professionnels sont  &nbsp;
               <i>
-                <b className="purple">Technologies Web et Produits </b> et
-                également dans des domaines liés aux{" "}
+                <b className="purple">la création de nouveaux design, découvrir de nouvelles méthodes pour 
+                  améliorer l'expérience et l'interface utilisateur </b> et
+                également découvrir de nouvelles façons d'utiliser les innovations liées à l'intelligence artificielle
+                 dans le but d'améliorer les performances de développement.{" "}
                 <b className="purple">
-                  Jeux Vidéo, l'Intelligence Artificielle.
+                  
                 </b>
               </i>
               <br />
               <br />
-              Chaque fois que possible, j'applique également ma passion pour développer des applications Web
+              Chaque fois que possible, même dans ma vie personnel, j'applique également ma passion pour développer des applications Web
               avec <b className="purple">Node.js</b> et des
               <i>
                 <b className="purple">
