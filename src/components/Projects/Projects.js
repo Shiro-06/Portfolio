@@ -33,7 +33,7 @@ function Projects() {
               carouselImages={[
                 require("../../Assets/Projects/Booki 1.png"),
               ]}
-              techStack={["html5", "css3", "javascript"]}
+              techStack={["html5", "css3"]}
             />
           </Col>
 
@@ -50,7 +50,7 @@ function Projects() {
                 require("../../Assets/Projects/OMF 3.png"),
                 require("../../Assets/Projects/OMF 4.png")
               ]}
-              techStack={["html5", "css3", "sass", "javascript"]}
+              techStack={["html5", "css3", "sass"]}
             />
           </Col>
 
@@ -124,7 +124,7 @@ function Projects() {
               description="Pour la phase 1 : J'ai utilisé React, SASS et Redux pour développer une application web complète et responsive, avec des pratiques de Green Code pour optimiser les images et le code. L'application permet aux utilisateurs de se connecter, de voir leur profil, et de se déconnecter, tout en gérant les erreurs de connexion. 
               Pour la phase 2 : J'ai conçu une fonctionnalité pour les transactions permettant aux utilisateurs de visualiser leurs transactions, voir les détails, et modifier les informations. J'ai proposé des routes API en suivant les directives de Swagger, spécifiant les méthodes HTTP, les routes, les descriptions, les paramètres et les réponses possibles."
               ghLink="https://github.com/Shiro-06/ArgentBank-website/tree/master"
-              demoLink=" "
+              demoLink=""
               carouselImages={[
                 require("../../Assets/Projects/Argent Bank 1.png"),
                 require("../../Assets/Projects/Argent Bank 2.png"),

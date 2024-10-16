@@ -1,21 +1,75 @@
 #preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999999;
-    background-color: #000000;
-    background-image: url(../../Assets/pre.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background-color: #000000;
+  transition: opacity 1s ease-in-out; /* Ajouter une transition pour l'opacité */
   
-  #preloader-none {
-    opacity: 0;
+  &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 50vw; /* Augmenter la largeur relative */
+      height: 50vw; /* Augmenter la hauteur relative */
+      max-width: 600px; /* Limiter la taille maximale */
+      max-height: 600px; /* Limiter la taille maximale */
+      background-image: url(../../Assets/neonpre.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transform: translate(-50%, -50%);
+      animation: rotate 2s linear infinite; /* Ajouter une animation de rotation */
   }
-  
-  #no-scroll {
-    overflow: hidden;
-    height: 100vh;
+
+  &::after {
+      content: "Chargement...";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white; /* Couleur du texte */
+      font-size: clamp(1rem, 2vw, 24px); /* Limiter la taille maximale du texte */
+      font-family: Arial, sans-serif; /* Police du texte */
+      animation: blink 1.5s linear infinite; /* Ajouter une animation de clignotement */
   }
+}
+
+@keyframes rotate {
+  0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+}
+
+#preloader-none {
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Ajouter une transition pour l'opacité */
+}
+
+#no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Media query pour les écrans mobiles */
+@media (max-width: 600px) {
+  #preloader::before {
+      width: 70vw; /* Augmenter la largeur relative pour les mobiles */
+      height: 70vw; /* Augmenter la hauteur relative pour les mobiles */
+  }
+}
